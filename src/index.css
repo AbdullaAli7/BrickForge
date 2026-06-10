@@ -1176,3 +1176,34 @@ ul     { list-style: none; }
   color: var(--text-2);
   white-space: nowrap;
 }
+
+/* ─── Quick add improvements ────────────────────────────── */
+.quick-sublabel {
+  display: block;
+  font-size: 10px;
+  color: var(--text-3);
+  margin: 6px 0 4px;
+  font-weight: 500;
+}
+
+.quick-btn-plate {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.quick-btn-plate:hover {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.quick-btn-special {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.quick-btn-special:hover {
+  background: var(--amber);
+  color: white;
+  border-color: var(--amber);
+}

@@ -95,13 +95,30 @@ export default function InventoryPanel() {
         )}
       </div>
 
-      {/* Quick-add common bricks */}
+      {/* Quick-add common bricks — organized by type */}
       <div className="quick-add">
-        <span className="quick-label">Quick add</span>
+        <span className="quick-label">Quick add (×10 each)</span>
+        <span className="quick-sublabel">Bricks</span>
         <div className="quick-grid">
-          {Object.entries(BRICK_TYPES).slice(0, 8).map(([id, brick]) => (
-            <button key={id} className="quick-btn" onClick={() => handleQuickAdd(id)} title={`Add 10× ${brick.label}`}>
-              {brick.label.replace("Brick ","").replace("Plate ","P")}
+          {[["3005","1×1"],["3004","1×2"],["3622","1×3"],["3010","1×4"],["3009","1×6"],["3003","2×2"],["3001","2×4"],["2456","2×6"]].map(([id, label]) => (
+            <button key={id} className="quick-btn" onClick={() => handleQuickAdd(id)} title={`Add 10× Brick ${label}`}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <span className="quick-sublabel">Plates</span>
+        <div className="quick-grid">
+          {[["3024","P1×1"],["3023","P1×2"],["3710","P1×4"],["3022","P2×2"],["3020","P2×4"],["3795","P2×6"]].map(([id, label]) => (
+            <button key={id} className="quick-btn quick-btn-plate" onClick={() => handleQuickAdd(id)} title={`Add 10× Plate ${label.slice(1)}`}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <span className="quick-sublabel">Special</span>
+        <div className="quick-grid">
+          {[["3040","Slope"],["3039","Slope 2×2"],["98283","Masonry"],["2877","Grille"],["3062","Round"],["4070","Headlight"]].map(([id, label]) => (
+            <button key={id} className="quick-btn quick-btn-special" onClick={() => handleQuickAdd(id)} title={`Add 10× ${label}`}>
+              {label}
             </button>
           ))}
         </div>

@@ -76,20 +76,38 @@ export async function fetchMatchingMOCs(partList) {
 // ─── Mock data (used when no API key is set) ────────────────────────────────
 
 const MOCK_PARTS = [
-  { part_num: "3001", name: "Brick 2x4",        part_img_url: null },
-  { part_num: "3003", name: "Brick 2x2",        part_img_url: null },
-  { part_num: "3004", name: "Brick 1x2",        part_img_url: null },
+  // Standard bricks
   { part_num: "3005", name: "Brick 1x1",        part_img_url: null },
+  { part_num: "3004", name: "Brick 1x2",        part_img_url: null },
+  { part_num: "3622", name: "Brick 1x3",        part_img_url: null },
   { part_num: "3010", name: "Brick 1x4",        part_img_url: null },
   { part_num: "3009", name: "Brick 1x6",        part_img_url: null },
   { part_num: "3008", name: "Brick 1x8",        part_img_url: null },
-  { part_num: "3023", name: "Plate 1x2",        part_img_url: null },
-  { part_num: "3024", name: "Plate 1x1",        part_img_url: null },
-  { part_num: "3020", name: "Plate 2x4",        part_img_url: null },
-  { part_num: "3022", name: "Plate 2x2",        part_img_url: null },
+  { part_num: "3003", name: "Brick 2x2",        part_img_url: null },
+  { part_num: "3002", name: "Brick 2x3",        part_img_url: null },
+  { part_num: "3001", name: "Brick 2x4",        part_img_url: null },
   { part_num: "2456", name: "Brick 2x6",        part_img_url: null },
-  { part_num: "6111", name: "Brick 1x10",       part_img_url: null },
-  { part_num: "4477", name: "Plate 1x10",       part_img_url: null },
+  { part_num: "3007", name: "Brick 2x8",        part_img_url: null },
+  // Plates
+  { part_num: "3024", name: "Plate 1x1",        part_img_url: null },
+  { part_num: "3023", name: "Plate 1x2",        part_img_url: null },
+  { part_num: "3710", name: "Plate 1x4",        part_img_url: null },
+  { part_num: "3666", name: "Plate 1x6",        part_img_url: null },
+  { part_num: "3022", name: "Plate 2x2",        part_img_url: null },
+  { part_num: "3020", name: "Plate 2x4",        part_img_url: null },
+  { part_num: "3795", name: "Plate 2x6",        part_img_url: null },
+  { part_num: "3034", name: "Plate 2x8",        part_img_url: null },
+  // Slopes
+  { part_num: "3040", name: "Slope 1x2 45°",    part_img_url: null },
+  { part_num: "3039", name: "Slope 2x2 45°",    part_img_url: null },
+  { part_num: "3037", name: "Slope 2x4 45°",    part_img_url: null },
+  { part_num: "3665", name: "Inv Slope 1x2",    part_img_url: null },
+  // Special
+  { part_num: "3062", name: "Round Brick 1x1",  part_img_url: null },
+  { part_num: "3941", name: "Round Brick 2x2",  part_img_url: null },
+  { part_num: "98283",name: "Masonry Brick 1x2",part_img_url: null },
+  { part_num: "2877", name: "Grille Brick 1x2", part_img_url: null },
+  { part_num: "4070", name: "Headlight Brick",  part_img_url: null },
 ];
 
 function getMockParts(query) {
