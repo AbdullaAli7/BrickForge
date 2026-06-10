@@ -16,7 +16,7 @@ BrickForge is a free, open-source web app that lets you input the LEGO bricks yo
 
 ```bash
 npm install
-cp .env.example .env   # optional: add Rebrickable API key
+cp .env
 npm run dev
 ```
 
